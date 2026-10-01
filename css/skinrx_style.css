@@ -1,0 +1,184 @@
+/* Layout */
+#gnb {
+    width: 100%;
+    height: 32px;
+    background: #000000;
+}
+#header {
+}
+#nav {
+}
+#main {
+}
+#footer {
+}
+.container {
+    width: 944px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #daa1a185;
+}
+
+/* gnb */
+.gnb_inner {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#gnb h6 {
+    font: 0.8em;
+}
+#gnb h6 a {
+    color: #fff;
+}
+#gnb h6 a:hover {
+    color: rgb(61, 59, 59);
+}
+
+#gnb ul {
+    display: flex;
+}
+#gnb ul li {
+    font-size: 0.85em;
+    padding: 0 9px;
+}
+#gnb ul li:last-child {
+    padding-right: 0;
+}
+#gnb ul li a {
+    color: #fff;
+}
+#gnb ul li a:hover {
+    color: rgb(61, 59, 59);
+}
+
+/* 이미지를 표현하는 방법
+1) html 태그를 통해서 표현하는 방법 ex) < img src=".." >
+- 중요한 이미지에/배너 등등
+2) css 속성값으로 표현하는 방법 ex) background:....
+3) 이미지 스프라이트 방법: 아이콘 종류에 많이 쓰임
+*/
+/* 아이콘 */
+#gnb h6 span {
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: url(../img/icons.png) no-repeat -350px 2px;
+    margin-left: 3px;
+}
+#gnb ul li span {
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: url(../img/icons.png) no-repeat 0 0;
+    margin-left: 5px;
+}
+#gnb ul li:nth-child(3) span {
+    background-position: -299px 2px;
+}
+#gnb ul li:nth-child(4) span {
+    background-position: -200px 2px;
+}
+#gnb ul li:nth-child(6) span {
+    background-position: -250px 2px;
+}
+
+/* header */
+.header_inner {
+    height: 109px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul.menu {
+    display: flex;
+}
+ul.menu li {
+}
+ul.menu li a {
+    display: block;
+    padding: 0 11px;
+    font-weight: bold;
+
+    position: relative;
+}
+ul.menu li:first-child a {
+    padding-left: 0;
+}
+/* 가상요소:css에 문자를 넣을 수 있음 */
+ul.menu li a.bar::after {
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: #a76f6f;
+    position: absolute;
+    top: 2px;
+    right: 0;
+}
+ul.menu li a:hover {
+    color: rgb(138, 80, 80);
+}
+
+h1.logo {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 4em;
+    letter-spacing: 7px;
+    font-weight: 600;
+
+    /* 사이트 로고 반응형에서도 정중앙에 두는 법
+    container에 position: relative; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+h1.logo a {
+    color: #1b1b1b;
+}
+h1.logo a span {
+    color: #a7a6a6;
+    letter-spacing: 0;
+}
+
+.search_box {
+    display: flex;
+    border: 1px solid #646464;
+    box-sizing: border-box;
+}
+.search_box input {
+    display: block;
+    width: 184px;
+    height: 36px;
+    padding-left: 10px;
+    outline: none;
+    background-color: transparent;
+}
+.search_box button {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: url(../img/lip.png) no-repeat center center / 75%;
+    cursor: pointer;
+}
+
+/* nav */
+#nav ul {
+    /* height: 56px;
+    align-items: center; */
+    display: flex;
+    justify-content: space-around;
+    border-top: 5px solid #000000;
+}
+#nav ul li {
+    font-family: "Clarity City", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+#nav ul li a {
+    display: block;
+    padding: 20px 0;
+    color: #000000;
+}
+#nav ul li a:hover {
+    color: rgb(138, 80, 80);
+}
