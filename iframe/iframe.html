@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                list-style: none;
+            }
+            #wrap {
+                width: 1000px;
+                margin: 0 auto;
+                background-color: #555555;
+            }
+            ul {
+                height: 80px;
+                display: flex;
+            }
+            li {
+                width: 20%;
+                font-size: 20px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            li:nth-child(1) {
+                background-color: #fd9797;
+            }
+            li:nth-child(2) {
+                background-color: #e23e3e;
+            }
+            li:nth-child(3) {
+                background-color: #db3a3a;
+            }
+            li:nth-child(4) {
+                background-color: #807474;
+            }
+            li:nth-child(5) {
+                background-color: #ff0404;
+            }
+            a {
+                color: #ffffff;
+            }
+            .iframe_inner {
+                width: 100%;
+                height: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>practice iframe</h1>
+        <div id="wrap">
+            <ul>
+                <li><a href="one.html" target="number">menu01</a></li>
+                <li><a href="two.html" target="number">menu02</a></li>
+                <li><a href="three.html" target="number">menu03</a></li>
+                <li><a href="four.html" target="number">menu04</a></li>
+                <li><a href="five.html" target="number">menu05</a></li>
+            </ul>
+            <div class="iframe_inner">
+                <iframe src="" frameborder="0" width="100%" height="100%" name="number"></iframe>
+            </div>
+        </div>
+    </body>
+</html>
