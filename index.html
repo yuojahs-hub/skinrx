@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SKINRx</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/font.css" />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/skinrx_style.css" />
-        <title>SKINRx</title>
     </head>
     <body>
         <nav id="gnb">
@@ -67,7 +69,21 @@
             <div class="container">
                 <section class="main_banner" aria-label="메인 프로모션 배너">
                     <h2 class="ir_so">메인 배너</h2>
-                    <div class="rolling"><img src="img/main_roll01.png" alt="이미지" /></div>
+                    <!-- <div class="rolling"><img src="img/main_roll01.png" alt="이미지" /></div> -->
+                    <!-- 슬라이더 만들기 -->
+                    <div class="swiper rolling">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/main_roll01.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/main_roll02.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/main_roll03.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/main_roll01.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/main_roll02.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/main_roll03.png" alt="이미지" /></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                     <div class="event_inner">
                         <div class="feature_item">
                             <figcaption>feature item</figcaption>
@@ -167,10 +183,28 @@
                     <div class="title">
                         <h2>SPECIAL PICKS</h2>
                     </div>
-                    <div class="product_box">
+                    <!-- <div class="product_box">
                         <div class="product"><img src="img/brand_product01.png" alt="이미지" /></div>
                         <div class="product"><img src="img/brand_product02.png" alt="이미지" /></div>
                         <div class="product"><img src="img/brand_product03.png" alt="이미지" /></div>
+                    </div> -->
+
+                    <!-- Swiper -->
+                    <div class="swiper product_box">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/brand_product01.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product02.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product03.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product01.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product02.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product03.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product01.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product02.png" alt="이미지" /></div>
+                            <div class="swiper-slide"><img src="img/brand_product03.png" alt="이미지" /></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </section>
                 <!-- brand_focus -->
@@ -255,5 +289,37 @@
             </div>
         </footer>
         <!-- //footer -->
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".rolling", {
+                cssMode: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                mousewheel: true,
+                keyboard: true,
+            });
+
+            var swiper = new Swiper(".product_box", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
     </body>
 </html>

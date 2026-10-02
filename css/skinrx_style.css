@@ -186,7 +186,9 @@ h1.logo a span {
 }
 .rolling {
     width: 624px;
-    background-color: #dd8f8f;
+}
+.rolling img {
+    width: 100%;
 }
 .feature_item {
     width: 304px;
